@@ -8,12 +8,7 @@ remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_lo
 function hoatq_custom_link_demo_fields() {
   $field = array(
     'id' => '_link_demo_field',
-    "label" => __("Link demo", "woocommerce") ,
-    'data_type' => 'number',
-    'custom_attributes' => array(
-        'step' => 'any',
-        'min' => '0'
-    )
+    "label" => __("Link demo", "woocommerce") 
 );
   woocommerce_wp_text_input($field);
 }
