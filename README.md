@@ -34,3 +34,9 @@ $product->get_meta( '_link_demo_field' )
 ```php
 add_action("flatsome_product_box_actions", "custom_product_box_actions");
 ```
+
+//Move the Woocommerce Review tab below the description
+function woocommerce_template_product_reviews() {
+woocommerce_get_template( 'single-product-reviews.php' );
+}
+add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_reviews', 50 );
